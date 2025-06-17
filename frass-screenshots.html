@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FRASS - Facial Recognition Attendance System Screenshots">
+    <title>FRASS Project Screenshots - John Paul M. Budy</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/frass-screenshots.css">
+</head>
+<body>
+    <!-- Back Button -->
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+
+    <!-- Hero Section -->
+    <section class="screenshots-hero">
+        <div class="screenshots-container">
+            <h1 data-aos="fade-up">FRASS Project Screenshots</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Facial Recognition Attendance Sheet System</p>
+        </div>
+    </section>
+
+    <!-- Project Info -->
+    <section class="project-info">
+        <div class="screenshots-container">
+            <div data-aos="fade-up">
+                <h2 style="text-align: center; margin-bottom: 20px;">Project Overview</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-light); line-height: 1.6;">
+                    An automated attendance management system using facial recognition technology to streamline faculty
+                    attendance tracking with real-time processing, digital record management, and comprehensive reporting features.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-item">Python</span>
+                    <span class="tech-item">Flask</span>
+                    <span class="tech-item">OpenCV</span>
+                    <span class="tech-item">SQLite</span>
+                    <span class="tech-item">Bootstrap</span>
+                    <span class="tech-item">Computer Vision</span>
+                    <span class="tech-item">Machine Learning</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Grid -->
+    <section style="background: #f8f9fa; padding: 60px 0;">
+        <div class="screenshots-container">
+            <div class="screenshots-grid">
+                <!-- Screenshot 1: Login Page -->
+                <div class="screenshot-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets\images\projects\FRASS\login-page.jpg" alt="FRASS Login Page" class="screenshot-img" onclick="openModal(this)">
+                    <div class="screenshot-info">
+                        <h3 class="screenshot-title">Login & Authentication</h3>
+                        <p class="screenshot-desc">Secure login system with role-based access control for Faculty, Admin, and Super Admin users.</p>
+                    </div>
+                </div>
+
+                <!-- Screenshot 2: Dashboard -->
+                <div class="screenshot-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets\images\projects\FRASS\dashboard.jpg" alt="FRASS Dashboard" class="screenshot-img" onclick="openModal(this)">
+                    <div class="screenshot-info">
+                        <h3 class="screenshot-title">Main Dashboard</h3>
+                        <p class="screenshot-desc">Comprehensive dashboard showing attendance statistics, recent activities, and quick access to key features.</p>
+                    </div>
+                </div>
+
+                <!-- Screenshot 3: Facial Recognition -->
+                <div class="screenshot-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets\images\projects\FRASS\facial-recognition.jpg" alt="Facial Recognition Interface" class="screenshot-img" onclick="openModal(this)">
+                    <div class="screenshot-info">
+                        <h3 class="screenshot-title">Facial Recognition Interface</h3>
+                        <p class="screenshot-desc">Real-time facial recognition system with live camera feed and automatic attendance marking.</p>
+                    </div>
+                </div>
+
+                <!-- Screenshot 4: User Management -->
+                <div class="screenshot-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets\images\projects\FRASS\user-management.jpg" alt="User Management" class="screenshot-img" onclick="openModal(this)">
+                    <div class="screenshot-info">
+                        <h3 class="screenshot-title">User Management</h3>
+                        <p class="screenshot-desc">Admin panel for registering new faculty members with photo capture and profile management.</p>
+                    </div>
+                </div>
+
+                <!-- Screenshot 5: DTR Reports -->
+                <div class="screenshot-card" data-aos="fade-up" data-aos-delay="500">
+                    <img src="assets/images/frass/dtr-reports.jpg" alt="DTR Reports" class="screenshot-img" onclick="openModal(this)">
+                    <div class="screenshot-info">
+                        <h3 class="screenshot-title">DTR Reports</h3>
+                        <p class="screenshot-desc">Digital Time Record generation with professional formatting and export capabilities.</p>
+                    </div>
+                </div>
+
+                <!-- Screenshot 6: Attendance History -->
+                <div class="screenshot-card" data-aos="fade-up" data-aos-delay="600">
+                    <img src="assets/images/frass/attendance-history.jpg" alt="Attendance History" class="screenshot-img" onclick="openModal(this)">
+                    <div class="screenshot-info">
+                        <h3 class="screenshot-title">Attendance History</h3>
+                        <p class="screenshot-desc">Detailed attendance tracking with time-in/time-out records and session management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Image Preview -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/frass-screenshots.js"></script>
+</body>
+</html>

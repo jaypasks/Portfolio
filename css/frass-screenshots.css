@@ -1,0 +1,343 @@
+/* FRASS Screenshots Page Styles */
+
+.screenshots-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.screenshots-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.back-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.project-info {
+    background: #f8f9fa;
+    padding: 60px 0;
+    margin-bottom: 40px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tech-item {
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.screenshots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.screenshot-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.screenshot-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.screenshot-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.screenshot-card:hover .screenshot-img {
+    transform: scale(1.05);
+}
+
+.screenshot-info {
+    padding: 20px;
+}
+
+.screenshot-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.screenshot-desc {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .screenshots-hero {
+        padding: 100px 0 60px;
+    }
+    
+    .screenshots-container {
+        padding: 0 15px;
+    }
+    
+    .screenshots-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 30px 0;
+    }
+    
+    .back-btn {
+        position: relative;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+    
+    .project-info {
+        padding: 40px 0;
+    }
+    
+    .tech-stack {
+        gap: 8px;
+    }
+    
+    .tech-item {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    
+    .screenshot-card {
+        border-radius: 10px;
+    }
+    
+    .screenshot-img {
+        height: 200px;
+    }
+    
+    .screenshot-info {
+        padding: 15px;
+    }
+    
+    .screenshot-title {
+        font-size: 16px;
+    }
+    
+    .screenshot-desc {
+        font-size: 13px;
+    }
+    
+    .modal-content {
+        width: 95%;
+        max-height: 85%;
+    }
+    
+    .close {
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .screenshots-hero {
+        padding: 80px 0 50px;
+    }
+    
+    .screenshots-hero h1 {
+        font-size: 24px;
+    }
+    
+    .screenshots-grid {
+        gap: 15px;
+        padding: 20px 0;
+    }
+    
+    .screenshot-img {
+        height: 180px;
+    }
+    
+    .back-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Dark mode support */
+body.dark-theme .project-info {
+    background: var(--bg-dark, #1a1a1a);
+    color: var(--text-dark, #ffffff);
+}
+
+body.dark-theme .screenshot-card {
+    background: var(--card-dark, #2a2a2a);
+}
+
+body.dark-theme .screenshot-title {
+    color: var(--text-dark, #ffffff);
+}
+
+body.dark-theme .screenshot-desc {
+    color: var(--text-light-dark, #cccccc);
+}
+
+body.dark-theme .screenshots-hero {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+}
+
+body.dark-theme .tech-item {
+    background: var(--primary-color, #007bff);
+    color: white;
+}
+
+/* Auto dark mode support (system preference) */
+@media (prefers-color-scheme: dark) {
+    body:not(.light-theme) .project-info {
+        background: var(--bg-dark, #1a1a1a);
+        color: var(--text-dark, #ffffff);
+    }
+
+    body:not(.light-theme) .screenshot-card {
+        background: var(--card-dark, #2a2a2a);
+    }
+
+    body:not(.light-theme) .screenshot-title {
+        color: var(--text-dark, #ffffff);
+    }
+
+    body:not(.light-theme) .screenshot-desc {
+        color: var(--text-light-dark, #cccccc);
+    }
+
+    body:not(.light-theme) .screenshots-hero {
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+    }
+
+    body:not(.light-theme) .tech-item {
+        background: var(--primary-color, #007bff);
+        color: white;
+    }
+}
+
+/* Loading animation for images */
+.screenshot-img {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+.screenshot-img[src] {
+    background: none;
+    animation: none;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+.back-btn:focus,
+.screenshot-img:focus,
+.close:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    .back-btn,
+    .modal {
+        display: none !important;
+    }
+    
+    .screenshots-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .screenshot-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}

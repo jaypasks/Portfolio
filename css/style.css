@@ -310,7 +310,7 @@ body {
     box-shadow: var(--shadow-lg);
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     padding: 5px;
-}
+} 
 
 .profile-img {
     width: 300px;
