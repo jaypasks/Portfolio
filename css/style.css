@@ -313,8 +313,8 @@ body {
 } 
 
 .profile-img {
-    width: 300px;
-    height: 300px;
+    width: 380px;
+    height: 450px;
     object-fit: cover;
     border-radius: var(--radius-lg);
     display: block;
