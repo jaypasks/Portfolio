@@ -25,26 +25,6 @@ A modern, responsive personal portfolio website built with HTML5, CSS3, and Java
 - **Google Fonts**: Typography (Inter font family)
 - **AOS Library**: Animate On Scroll effects
 
-## 📁 Project Structure
-
-```
-/
-├── index.html              # Main HTML file
-├── css/
-│   ├── style.css          # Main stylesheet
-│   └── responsive.css     # Media queries and responsive design
-├── js/
-│   ├── main.js           # Core functionality
-│   └── animations.js     # Animation effects
-├── assets/
-│   ├── images/           # Image assets
-│   │   ├── profile.jpg   # Profile photo
-│   │   ├── about.jpg     # About section image
-│   │   └── projects/     # Project screenshots
-│   └── resume.pdf        # Downloadable resume
-└── README.md             # Project documentation
-```
-
 ## 🎨 Sections
 
 1. **Hero Section**: Introduction with profile image and call-to-action
@@ -55,7 +35,6 @@ A modern, responsive personal portfolio website built with HTML5, CSS3, and Java
 6. **Footer**: Social links and copyright
 
 ## 🛠️ Setup Instructions
-
 1. **Clone or Download**: Get the project files
 2. **Replace Content**: Update the sample data with your information
 3. **Add Images**: Replace placeholder images with your photos
@@ -72,17 +51,7 @@ Edit the following in `index.html`:
 - Skills and technologies
 - Project information
 - Contact details
-
-### Styling
-Modify CSS variables in `css/style.css`:
-```css
-:root {
-    --primary-color: #2563eb;    /* Main brand color */
-    --secondary-color: #64748b;  /* Secondary color */
-    --accent-color: #f59e0b;     /* Accent color */
-    /* ... other variables */
-}
-```
+ 
 
 ### Images
 Replace these files in `assets/images/`:
@@ -131,13 +100,6 @@ The contact form includes client-side validation. To make it functional:
 
 ## 🔧 Development
 
-To modify this portfolio:
-
-1. **HTML Structure**: Update content in `index.html`
-2. **Styling**: Modify `css/style.css` and `css/responsive.css`
-3. **Functionality**: Edit `js/main.js` and `js/animations.js`
-4. **Testing**: Test across different devices and browsers
-5. **Optimization**: Compress images and minify code for production
 
 ## 📄 License
 
