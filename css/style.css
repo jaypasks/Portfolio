@@ -1,22 +1,34 @@
-/* CSS Variables for Theme */
+/* CSS Variables for Neumorphism Theme */
 :root {
-    /* Colors */
+    /* Primary Colors */
     --primary-color: #2563eb;
     --primary-dark: #1d4ed8;
-    --secondary-color: #64748b;
+    --secondary-color: #6366f1;
     --accent-color: #f59e0b;
-    
-    /* Light Theme */
-    --bg-color: #ffffff;
-    --bg-secondary: #f8fafc;
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
-    --border-color: #e2e8f0;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    
+
+    /* Light Neumorphism Theme */
+    --bg-color: #e0e5ec;
+    --bg-secondary: #e8edf4;
+    --bg-tertiary: #f0f5fa;
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --text-light: #718096;
+
+    /* Neumorphism Shadows */
+    --shadow-light: #ffffff;
+    --shadow-dark: #c2c8d0;
+    --shadow-inset-light: #f0f5fa;
+    --shadow-inset-dark: #c8ccd1;
+
+    /* Neumorphism Effects */
+    --neu-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+    --neu-shadow-sm: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+    --neu-shadow-lg: 12px 12px 24px var(--shadow-dark), -12px -12px 24px var(--shadow-light);
+    --neu-inset: inset 4px 4px 8px var(--shadow-inset-dark), inset -4px -4px 8px var(--shadow-inset-light);
+    --neu-inset-sm: inset 2px 2px 4px var(--shadow-inset-dark), inset -2px -2px 4px var(--shadow-inset-light);
+
     /* Typography */
-    --font-family: 'Inter', sans-serif;
+    --font-family: 'Inter', 'Segoe UI', sans-serif;
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
@@ -26,7 +38,7 @@
     --font-size-3xl: 1.875rem;
     --font-size-4xl: 2.25rem;
     --font-size-5xl: 3rem;
-    
+
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -34,27 +46,96 @@
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
     --spacing-2xl: 4rem;
-    
-    /* Border Radius */
-    --radius-sm: 0.375rem;
-    --radius-md: 0.5rem;
-    --radius-lg: 0.75rem;
-    --radius-xl: 1rem;
-    
+
+    /* Neumorphism Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-2xl: 24px;
+
     /* Transitions */
     --transition: all 0.3s ease;
     --transition-fast: all 0.15s ease;
 }
 
-/* Dark Theme */
+/* Dark Neumorphism Theme */
 [data-theme="dark"] {
-    --bg-color: #0f172a;
-    --bg-secondary: #1e293b;
-    --text-primary: #f1f5f9;
-    --text-secondary: #94a3b8;
-    --border-color: #334155;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    /* Dark Neumorphism Colors */
+    --bg-color: #2a2d3a;
+    --bg-secondary: #323644;
+    --bg-tertiary: #3a3f4e;
+    --text-primary: #e2e8f0;
+    --text-secondary: #cbd5e0;
+    --text-light: #a0aec0;
+
+    /* Dark Neumorphism Shadows */
+    --shadow-light: #363b4a;
+    --shadow-dark: #1e1f26;
+    --shadow-inset-light: #363b4a;
+    --shadow-inset-dark: #1e1f26;
+
+    /* Dark Neumorphism Effects */
+    --neu-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+    --neu-shadow-sm: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+    --neu-shadow-lg: 12px 12px 24px var(--shadow-dark), -12px -12px 24px var(--shadow-light);
+    --neu-inset: inset 4px 4px 8px var(--shadow-inset-dark), inset -4px -4px 8px var(--shadow-inset-light);
+    --neu-inset-sm: inset 2px 2px 4px var(--shadow-inset-dark), inset -2px -2px 4px var(--shadow-inset-light);
+}
+
+/* Dark theme specific overrides */
+[data-theme="dark"] .project-overlay {
+    background: rgba(42, 45, 58, 0.95);
+}
+
+[data-theme="dark"] .contact {
+    background: var(--bg-color);
+}
+
+/* Keep contact form in light mode styling even in dark theme - Subtle white glow */
+[data-theme="dark"] .contact-form {
+    background: #e0e5ec !important;
+    box-shadow: 10px 10px 30px #c2c8d0, -10px -10px 30px #f8f9fa !important;
+}
+
+[data-theme="dark"] .contact-form .form-group input,
+[data-theme="dark"] .contact-form .form-group textarea {
+    background: #e0e5ec !important;
+    box-shadow: inset 4px 4px 8px #c8ccd1, inset -4px -4px 8px #eef3f8 !important;
+    color: #2d3748 !important;
+}
+
+[data-theme="dark"] .contact-form .form-group input::placeholder,
+[data-theme="dark"] .contact-form .form-group textarea::placeholder {
+    color: #8a8a8a !important;
+}
+
+[data-theme="dark"] .contact-form .form-group input:focus,
+[data-theme="dark"] .contact-form .form-group textarea:focus {
+    box-shadow: inset 6px 6px 12px #c2c8d0, inset -6px -6px 12px #f0f4f8 !important;
+    background: #dde3ea !important;
+}
+
+[data-theme="dark"] .contact-form .btn {
+    background: #e0e5ec !important;
+    color: #2d3748 !important;
+    box-shadow: 8px 8px 16px #c2c8d0, -8px -8px 16px #f5f7fa !important;
+}
+
+[data-theme="dark"] .contact-form .btn:hover {
+    background: #d6dce4 !important;
+    box-shadow: 6px 6px 12px #c2c8d0, -6px -6px 12px #f2f5f8 !important;
+}
+
+[data-theme="dark"] .contact-form .btn:active {
+    box-shadow: inset 4px 4px 8px #c2c8d0, inset -4px -4px 8px #f0f4f8 !important;
+}
+
+/* Error states for contact form in dark mode - keep light styling */
+[data-theme="dark"] .contact-form .form-group input.error,
+[data-theme="dark"] .contact-form .form-group textarea.error {
+    background: #f0d5d5 !important;
+    box-shadow: inset 4px 4px 8px #d4b8b8, inset -4px -4px 8px #ffffff !important;
 }
 
 /* Reset and Base Styles */
@@ -84,20 +165,17 @@ body {
     padding: 0 var(--spacing-sm);
 }
 
-/* Navigation */
+/* Neumorphism Navigation */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
+    background: var(--bg-color);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--neu-shadow-sm);
     z-index: 1000;
     transition: var(--transition);
-}
-
-[data-theme="dark"] .navbar {
-    background-color: rgba(15, 23, 42, 0.95);
+    padding: 8px 0;
 }
 
 .nav-container {
@@ -134,27 +212,20 @@ body {
     font-weight: 500;
     transition: var(--transition);
     position: relative;
+    padding: 8px 16px;
+    border-radius: var(--radius-md);
+    background: var(--bg-color);
 }
 
 .nav-link:hover,
 .nav-link.active {
     color: var(--primary-color);
+    box-shadow: var(--neu-inset-sm);
+    background: var(--bg-secondary);
 }
 
 .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--primary-color);
-    transition: var(--transition);
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-    width: 100%;
+    display: none;
 }
 
 .nav-toggle {
@@ -172,28 +243,40 @@ body {
 }
 
 .theme-toggle {
-    background: none;
-    border: 2px solid var(--border-color);
+    background: var(--bg-color);
+    border: none;
     border-radius: var(--radius-md);
-    padding: var(--spacing-xs);
+    padding: 12px;
     cursor: pointer;
     color: var(--text-primary);
     transition: var(--transition);
     margin-left: var(--spacing-sm);
+    box-shadow: var(--neu-shadow-sm);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .theme-toggle:hover {
-    border-color: var(--primary-color);
+    box-shadow: var(--neu-inset-sm);
     color: var(--primary-color);
+    transform: translateY(-1px);
 }
 
-/* Hero Section */
+.theme-toggle:active {
+    box-shadow: var(--neu-inset);
+    transform: translateY(0);
+}
+
+/* Neumorphism Hero Section */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     padding: var(--spacing-2xl) 0;
-    background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-secondary) 100%);
+    background: var(--bg-color);
     position: relative;
 }
 
@@ -238,39 +321,74 @@ body {
     margin-bottom: var(--spacing-xl);
 }
 
+/* Neumorphism Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-xs);
     padding: var(--spacing-md) var(--spacing-lg);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: var(--transition);
-    border: 2px solid transparent;
+    border: none;
+    background: var(--bg-color);
+    box-shadow: var(--neu-shadow);
+    color: var(--text-primary);
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
+    box-shadow: var(--neu-shadow);
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+    box-shadow: var(--neu-shadow-lg);
 }
 
-.btn-secondary {
-    background-color: transparent;
-    color: var(--text-primary);
-    border-color: var(--border-color);
+.btn-primary:active {
+    transform: translateY(-1px);
+    box-shadow: var(--neu-shadow-sm);
 }
 
-.btn-secondary:hover {
-    border-color: var(--primary-color);
+/* Custom Resume Download Button */
+.btn-secondary[download] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 100px;
+    border-radius: var(--radius-lg);
+    background: var(--bg-color);
+    box-shadow: var(--neu-shadow-sm);
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-secondary[download]:hover {
+    box-shadow: var(--neu-inset-sm);
     color: var(--primary-color);
     transform: translateY(-2px);
+}
+
+.btn-secondary[download]:active {
+    box-shadow: var(--neu-inset);
+    transform: translateY(0);
+}
+
+@keyframes downloadBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(-2px);
+    }
+    40% {
+        transform: translateY(-6px);
+    }
+    60% {
+        transform: translateY(-4px);
+    }
 }
 
 .hero-social {
@@ -284,18 +402,23 @@ body {
     justify-content: center;
     width: 50px;
     height: 50px;
-    border-radius: var(--radius-md);
-    background-color: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    background: var(--bg-color);
+    box-shadow: var(--neu-shadow-sm);
     color: var(--text-secondary);
     text-decoration: none;
     transition: var(--transition);
-    border: 1px solid var(--border-color);
 }
 
 .hero-social a:hover {
-    background-color: var(--primary-color);
-    color: white;
+    box-shadow: var(--neu-inset-sm);
+    color: var(--primary-color);
     transform: translateY(-2px);
+}
+
+.hero-social a:active {
+    box-shadow: var(--neu-inset);
+    transform: translateY(0);
 }
 
 .hero-image {
@@ -305,19 +428,20 @@ body {
 
 .profile-card {
     position: relative;
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-2xl);
     overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    padding: 5px;
-} 
+    box-shadow: var(--neu-shadow-lg);
+    background: var(--bg-color);
+    padding: 20px;
+}
 
 .profile-img {
     width: 380px;
     height: 450px;
     object-fit: cover;
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     display: block;
+    box-shadow: var(--neu-inset-sm);
 }
 
 .scroll-indicator {
@@ -332,6 +456,20 @@ body {
     color: var(--text-secondary);
     font-size: var(--font-size-xl);
     text-decoration: none;
+    background: var(--bg-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--neu-shadow-sm);
+    transition: var(--transition);
+}
+
+.scroll-indicator a:hover {
+    box-shadow: var(--neu-inset-sm);
+    transform: translateY(-2px);
 }
 
 @keyframes bounce {
@@ -359,9 +497,10 @@ section {
     color: var(--text-primary);
 }
 
-/* About Section */
+/* Neumorphism About Section */
 .about {
-    background-color: var(--bg-secondary);
+    background: var(--bg-secondary);
+    padding: var(--spacing-2xl) 0;
 }
 
 .about-content {
@@ -425,11 +564,17 @@ section {
 }
 
 .skill-category {
-    background-color: var(--bg-color);
+    background: var(--bg-color);
     padding: var(--spacing-xl);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--neu-shadow);
     text-align: center;
+    transition: var(--transition);
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--neu-shadow-lg);
 }
 
 .skill-category h3 {
@@ -447,14 +592,21 @@ section {
 }
 
 .skill-item {
-    background-color: var(--bg-secondary);
+    background: var(--bg-color);
     color: var(--text-primary);
     padding: var(--spacing-xs) var(--spacing-md);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
     font-size: var(--font-size-sm);
     font-weight: 500;
-    border: 1px solid var(--border-color);
+    box-shadow: var(--neu-inset-sm);
     transition: var(--transition);
+    cursor: pointer;
+}
+
+.skill-item:hover {
+    box-shadow: var(--neu-shadow-sm);
+    transform: translateY(-2px);
+    color: var(--primary-color);
 }
 
 .skill-item:hover {
@@ -463,9 +615,10 @@ section {
     transform: translateY(-2px);
 }
 
-/* Projects Section */
+/* Neumorphism Projects Section */
 .projects {
-    background-color: var(--bg-secondary);
+    background: var(--bg-color);
+    padding: var(--spacing-2xl) 0;
 }
 
 .projects-grid {
@@ -475,16 +628,16 @@ section {
 }
 
 .project-card {
-    background-color: var(--bg-color);
-    border-radius: var(--radius-lg);
+    background: var(--bg-color);
+    border-radius: var(--radius-xl);
     overflow: hidden;
-    box-shadow: var(--shadow);
+    box-shadow: var(--neu-shadow);
     transition: var(--transition);
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-8px);
+    box-shadow: var(--neu-shadow-lg);
 }
 
 .project-image {
@@ -506,7 +659,8 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(37, 99, 235, 0.9);
+    background: rgba(224, 229, 236, 0.95);
+    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -525,15 +679,22 @@ section {
     justify-content: center;
     width: 50px;
     height: 50px;
-    background-color: white;
+    background: var(--bg-color);
     color: var(--primary-color);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
     text-decoration: none;
     transition: var(--transition);
+    box-shadow: var(--neu-shadow-sm);
 }
 
 .project-link:hover {
-    transform: scale(1.1);
+    box-shadow: var(--neu-inset-sm);
+    transform: translateY(-2px);
+}
+
+.project-link:active {
+    box-shadow: var(--neu-inset);
+    transform: translateY(0);
 }
 
 .project-content {
@@ -569,11 +730,19 @@ section {
 }
 
 /* Contact Section */
+.contact {
+    padding: var(--spacing-xl) 0;
+    background: #e0e5ec;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-2xl);
-    align-items: start;
+    align-items: center;
 }
 
 .contact-info h3 {
@@ -608,64 +777,109 @@ section {
     color: var(--primary-color);
 }
 
+/* Neumorphism Contact Form */
 .contact-form {
-    background-color: var(--bg-color);
-    padding: var(--spacing-xl);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow);
+    background: #e0e5ec;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px #c2c8d0, -10px -10px 30px #ffffff;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .form-group {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: 20px;
+    position: relative;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: var(--spacing-md);
-    border: 2px solid var(--border-color);
-    border-radius: var(--radius-md);
-    font-family: var(--font-family);
-    font-size: var(--font-size-base);
-    background-color: var(--bg-color);
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: none;
+    background: #e0e5ec;
+    box-shadow: inset 4px 4px 8px #c8ccd1, inset -4px -4px 8px #f0f5fa;
     color: var(--text-primary);
-    transition: var(--transition);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #8a8a8a;
+    font-weight: 400;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: inset 6px 6px 12px #c2c8d0, inset -6px -6px 12px #ffffff;
+    background: #dde3ea;
 }
 
 .form-group textarea {
     resize: vertical;
     min-height: 120px;
+    font-family: inherit;
 }
 
-/* Contact Form Enhancements */
-.form-group {
-    position: relative;
-    margin-bottom: 20px;
+/* Neumorphism Submit Button */
+.contact-form .btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px 25px;
+    background: #e0e5ec;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-primary);
+    box-shadow: 8px 8px 16px #c2c8d0, -8px -8px 16px #ffffff;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
+.contact-form .btn:hover {
+    background: #d6dce4;
+    box-shadow: 6px 6px 12px #c2c8d0, -6px -6px 12px #ffffff;
+    transform: translateY(-2px);
+}
+
+.contact-form .btn:active {
+    box-shadow: inset 4px 4px 8px #c2c8d0, inset -4px -4px 8px #ffffff;
+    transform: translateY(0);
+}
+
+.contact-form .btn.loading {
+    opacity: 0.8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.contact-form .btn i {
+    font-size: 14px;
+}
+
+/* Neumorphism Form Error States */
 .form-group input.error,
 .form-group textarea.error {
-    border-color: #dc3545;
-    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+    background: #f0d5d5;
+    box-shadow: inset 4px 4px 8px #d4b8b8, inset -4px -4px 8px #ffffff;
 }
 
 .field-error {
     color: #dc3545;
     font-size: 12px;
-    margin-top: 5px;
+    margin-top: 8px;
     display: block;
-}
-
-.btn.loading {
-    opacity: 0.7;
-    cursor: not-allowed;
+    font-weight: 500;
 }
 
 /* Notification Styles */
@@ -757,17 +971,22 @@ section {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: var(--bg-color);
+    border-radius: var(--radius-lg);
+    background: var(--bg-color);
+    box-shadow: var(--neu-shadow-sm);
     color: var(--text-secondary);
-    border-radius: var(--radius-md);
     text-decoration: none;
     transition: var(--transition);
 }
 
 .footer-social a:hover {
-    background-color: var(--primary-color);
-    color: white;
+   box-shadow: var(--neu-inset-sm);
+    color: var(--primary-color);
     transform: translateY(-2px);
+}
+.footer-social a:active {
+    box-shadow: var(--neu-inset);
+    transform: translateY(0);
 }
 
 /* Utility Classes */
