@@ -1,21 +1,8 @@
-const EMAILJS_CONFIG = {
-    serviceID: 'service_wnljfbw',
-    templateID: 'template_xkoc4bn',
-    publicKey: 'OJ1kYlW1e1q6HwuuN'
-};
+const FORMSUBMIT_EMAIL = 'budyjohnpaul80@gmail.com';
 
 document.addEventListener('DOMContentLoaded', function() {
-    initializeEmailJS();
     initializeContactForm();
 });
-
-function initializeEmailJS() {
-    try {
-        emailjs.init(EMAILJS_CONFIG.publicKey);
-    } catch (error) {
-        console.error('Failed to initialize EmailJS:', error);
-    }
-}
 
 function initializeContactForm() {
     const contactForm = document.getElementById('contact-form');
@@ -46,25 +33,45 @@ async function handleFormSubmission(event) {
     setSubmitButtonState(submitButton, true);
 
     try {
-        const templateParams = {
+        const formData = {
             name: form.name.value.trim(),
             email: form.email.value.trim(),
             subject: form.subject.value.trim(),
             message: form.message.value.trim(),
-            time: new Date().toLocaleString()
+            _subject: form.subject.value.trim(),
+            _captcha: 'false'
         };
 
-        await emailjs.send(
-            EMAILJS_CONFIG.serviceID,
-            EMAILJS_CONFIG.templateID,
-            templateParams
-        );
+        const response = await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_EMAIL}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
 
-        showNotification('Thank you! Your message has been sent successfully. I\'ll get back to you soon!', 'success');
-        form.reset();
-        clearAllFieldErrors(form);
+        let result;
+        try {
+            result = await response.json();
+        } catch (parseError) {
+            console.error('FormSubmit response was not JSON. Status:', response.status, response.statusText);
+            throw new Error('Invalid response from server');
+        }
+
+        console.log('FormSubmit response:', result);
+
+        if (result.success === 'true' || result.success === true) {
+            showNotification('Thank you! Your message has been sent successfully. I\'ll get back to you soon!', 'success');
+            form.reset();
+            clearAllFieldErrors(form);
+        } else {
+            console.error('FormSubmit error:', result.message || result);
+            throw new Error(result.message || 'Submission failed');
+        }
 
     } catch (error) {
+        console.error('Contact form error:', error.message);
         showNotification('Sorry, there was an error sending your message. Please try again or contact me directly.', 'error');
 
     } finally {
