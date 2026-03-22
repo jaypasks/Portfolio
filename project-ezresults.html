@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EZResults - Medical Document Data Extractor Screenshots">
+    <title>EZResults Project Screenshots - John Paul M. Budy</title>
+    
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/project-ezresults.css">
+</head>
+<body>
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+
+    <section class="screenshots-hero">
+        <div class="screenshots-container">
+            <h1 data-aos="fade-up">EZResults</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Automated Document Data Extraction and Reporting System</p>
+        </div>
+    </section>
+
+    <section class="project-info">
+        <div class="screenshots-container">
+            <div data-aos="fade-up">
+                <h2 style="text-align: center; margin-bottom: 20px;">Project Overview</h2>
+                <p style="text-align: center; max-width: 820px; margin: 0 auto; color: var(--text-light); line-height: 1.7;">
+                    This project automates the extraction and organization of data from multiple documents into structured Excel reports. It scans files, identifies relevant information, 
+                    and generates both detailed tables and summary statistics, reducing manual work while improving accuracy and efficiency.
+                </p>
+
+                <div class="tech-stack">
+                    <span class="tech-item">Python</span>
+                    <span class="tech-item">Tkinter</span>
+                    <span class="tech-item">PyPDF2</span>
+                    <span class="tech-item">pdfplumber</span>
+                    <span class="tech-item">python-docx</span>
+                    <span class="tech-item">pandas</span>
+                    <span class="tech-item">openpyxl</span>
+                    <span class="tech-item">Pillow</span>
+                    <span class="tech-item">PyInstaller</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--color-gray-50); padding: 60px 0;">
+        <div class="screenshots-container">
+            <div class="screenshots-grid">
+                <div class="screenshot-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/projects/EZRESULTS/choosefile.png" alt="EZResults Main Interface" class="screenshot-img" onclick="openModal(this)">
+                    <div class="screenshot-info">
+                        <h3 class="screenshot-title">Main Interface</h3>
+                        <p class="screenshot-desc">The multi-tab desktop interface with sections for folder scanning, single-file processing, and output management.</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/projects/EZRESULTS/choosefolder.png" alt="EZResults File Selection" class="screenshot-img" onclick="openModal(this)">
+                    <div class="screenshot-info">
+                        <h3 class="screenshot-title">File & Folder Selection</h3>
+                        <p class="screenshot-desc">Browse dialogs for selecting individual files or entire folders of medical documents for batch processing.</p>
+                    </div>
+                </div>
+               
+               
+                <div class="screenshot-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/projects/EZRESULTS/dataimport.png" alt="EZResults File Selection" class="screenshot-img" onclick="openModal(this)">
+                    <div class="screenshot-info">
+                        <h3 class="screenshot-title">Automated File Scanning and Excel Generation</h3>
+                        <p class="screenshot-desc">This interface demonstrates the application’s core functionality, 
+                            allowing users to scan folders or individual files and automatically extract relevant patient 
+                            data into a structured format. The system then generates an organized Excel report, 
+                            reducing manual data entry by 
+                            combining file parsing, extraction, and reporting into a single workflow..</p>
+                    </div>
+                </div>
+
+
+                 <div class="screenshot-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/projects/EZRESULTS/results1.png" alt="EZResults File Selection" class="screenshot-img" onclick="openModal(this)">
+                    <div class="screenshot-info">
+                        <h3 class="screenshot-title">Structured Data Output and Summary Analytics</h3>
+                        <p class="screenshot-desc">This output shows the processed data after extraction and transformation. 
+                            The first sheet displays structured patient information, while the second sheet summarizes the data by 
+                            automatically categorizing and tallying key metrics, 
+                            enabling quick insights without manual sorting or counting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/frass-screenshots.js"></script>
+</body>
+</html>

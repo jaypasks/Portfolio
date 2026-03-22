@@ -1,0 +1,38 @@
+# Image Placeholders
+
+This directory contains placeholder images for the portfolio. Replace these with your actual images:
+
+## Required Images:
+
+### Profile Images:
+- `profile.jpg` (300x300px) - Your main profile photo for the hero section
+- `about.jpg` (400x400px) - A secondary photo for the about section
+
+### Project Images:
+- `projects/project1.jpg` (600x400px) - Screenshot of your first project
+- `projects/project2.jpg` (600x400px) - Screenshot of your second project  
+- `projects/project3.jpg` (600x400px) - Screenshot of your third project
+
+### Resume:
+- `resume.pdf` - Your downloadable resume file
+
+## Image Guidelines:
+
+1. **Profile Photos**: Use high-quality, professional headshots with good lighting
+2. **Project Screenshots**: Capture clean, representative views of your projects
+3. **File Formats**: Use JPG for photos, PNG for screenshots with transparency
+4. **Optimization**: Compress images for web to improve loading speed
+5. **Alt Text**: The HTML already includes descriptive alt text for accessibility
+
+## Recommended Tools:
+- **Image Compression**: TinyPNG, ImageOptim, or Squoosh
+- **Image Editing**: Photoshop, GIMP, or Canva
+- **Screenshots**: Use browser dev tools or dedicated screenshot tools
+
+## Placeholder Sources:
+You can use these services for temporary placeholder images:
+- Unsplash (https://unsplash.com) - Free high-quality photos
+- Lorem Picsum (https://picsum.photos) - Placeholder image service
+- Pexels (https://pexels.com) - Free stock photos
+
+Replace this file and add your actual images when ready!

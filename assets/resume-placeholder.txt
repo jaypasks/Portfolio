@@ -1,0 +1,22 @@
+# Resume Placeholder
+
+Please add your actual resume file as `resume.pdf` in the assets directory.
+
+The download link in the portfolio points to `assets/resume.pdf`.
+
+## Resume Tips:
+
+1. **Format**: Use PDF format for best compatibility
+2. **File Size**: Keep under 2MB for fast downloads
+3. **Content**: Include contact info, experience, skills, education
+4. **Design**: Keep it clean and professional
+5. **Keywords**: Include relevant technical keywords
+6. **Length**: 1-2 pages is typically ideal
+
+## Tools for Creating Resumes:
+
+- **Online**: Canva, Resume.io, Zety
+- **Software**: Microsoft Word, Google Docs, LaTeX
+- **Design**: Adobe InDesign, Figma
+
+Replace this file with your actual `resume.pdf` when ready!

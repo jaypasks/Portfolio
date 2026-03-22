@@ -1,0 +1,33 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies (if Node tools are used locally)
+node_modules/
+
+# Environment / secrets (never commit these)
+.env
+.env.local
+.env.*.local
+
+# Build output (if added later)
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
